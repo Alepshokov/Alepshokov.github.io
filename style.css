@@ -1,0 +1,239 @@
+body {
+  	font-family: 'Lato', Verdana;
+  	font-size: 100%;
+	position: relative;
+}
+
+header{
+	width:80%;
+	margin:0 auto;
+}
+.bg{
+	background: url(image/a.jpg) no-repeat;
+	background-size: 100% 100%;
+	flex: .7;
+}
+.wrap
+{
+	display:flex;
+	justify-content: center;
+}
+.logo{
+  float: left; /* обтекание логотипа */
+}
+.logo img {
+  width:40%; height:40%;
+}
+.nav {
+  display:flex;
+}
+
+.nav > ul > li{
+  display:inline-block;
+}
+
+.nav > ul > li > a {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  color: #444;
+  -webkit-transition: 0.9s; /* плавный переход */
+  -moz-transition: 0.9s;
+  -o-transition: 0.9s;
+  transition: 0.9s;
+}
+.nav > ul > li > a:hover {
+  color: #fff;
+  background: #000;
+}
+
+/* Секция обо мне */
+.mops_bg{
+	display:flex;
+    justify-content: center;
+	background: url(image/b.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+.mops_text {
+   padding: 5% 0%;
+   display:flex;
+   justify-content: center;
+}
+.mops_text img{
+float: left;
+}
+.foto {
+	justify-content: flex-end;
+	flex: .3;
+}
+.self{
+	margin-left:5%;
+	margin-top: -4%;
+	flex: .4;
+}
+.mops_text h2 {
+  color: #fff;
+  font-size: 2.9em;
+  text-align: justify;
+ }
+.mops_text h2 span {
+  font-size: 1.1em;
+  font-weight: 290;
+}
+.mops_text p {
+  color: #fff;
+  font-size: 1.2em;
+  text-align: justify;
+  line-height: 1.3em;
+}
+
+
+/* Секция портфолио */
+.portfolio > h2{
+	text-align: center;
+	font-size: 3em;
+}
+.port_text p{
+	display:flex;
+	justify-content: center;
+}
+.edu,.work{
+	display:flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+.edutext,.worktext{ 
+	flex: .6; 
+} 
+.edu > h2,.work > h2 { 
+	border-bottom: 3px solid;
+	flex: .2; 
+}
+.edu p,.work p{
+	width: 70%;
+	text-align: justify;
+}
+
+/* Секция галереи*/
+.photo-wall > h2, .contacts > h2{
+	text-align:center;
+	font-size: 3em;
+	border-top:3px solid;
+	background: url(image/a.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+.container {
+	width: 100%;
+	margin: 10px auto;
+	overflow: hidden;
+}
+
+      #zatemnenie1, #zatemnenie2, #zatemnenie3, #zatemnenie4, #zatemnenie5{
+        background: rgba(102, 102, 102, 0.9);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+      }
+      #okno {
+        width: 70%;
+        height: 90%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+	    }
+      #zatemnenie1:target, #zatemnenie2:target, #zatemnenie3:target, #zatemnenie4:target, #zatemnenie5:target {display: block;}
+      .close {
+		width: 8%;
+        display: inline-block;
+        border: 1px solid #0000cc;
+        color: #0000cc;
+        padding: 0 10px;
+        text-decoration: none;
+        background: #f2f2f2;
+        font-size: 14pt;
+        cursor:pointer;
+		position: absolute;
+      }
+	  #okno img{
+		width:100%;
+		height:100%;
+	   }
+.close:hover {background: #e6e6ff;}
+	   
+/* 100% - (5 * 4%) = 80% */
+/* 80%/5 = 16% */
+.container ul li {
+	list-style:none;
+	float: left;
+	width: 16%;
+	margin: 2% 2% 2% 2%;
+}
+.container ul li a img {
+	max-width: 100%;
+}
+/* Media Queries */
+ 
+/* 100% - (4 * 4%) = 84% */
+/* 80%/4 = 21% */
+@media only screen and (max-width : 940px),
+only screen and (max-device-width : 940px){ 
+	
+	.container ul li {
+		width: 21%;
+	}
+}
+
+/* 100% - (3 * 4%) = 88% */
+/* 88%/3 = 29.33333% */
+@media only screen and (max-width : 720px),
+only screen and (max-device-width : 720px){ 
+	.container ul li {
+		width: 29.33333%
+	}
+}
+
+/* 100% - (2 * 4%) = 92% */
+/* 92%/2 = 46% */
+@media only screen and (max-width : 530px),
+only screen and (max-device-width : 530px){ 
+	.container ul li {
+		width: 46%
+	}
+}
+
+/* 100% - 4% = 96% */
+/* 96% */
+@media only screen and (max-width : 320px),
+only screen and (max-device-width : 320px){  
+	.container ul li {
+		width: 96%
+	}
+}
+
+/*Секция контактов*/
+.cont ul{
+	list-style:none;
+	overflow: hidden;
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+	margin-left: 20%;
+	line-height:2%;
+}
+
+.cont img{
+	width:7%;
+	height:7%;
+	float: left;
+	margin-right:2%;
+	margin-top: 1%;
+	
+}
